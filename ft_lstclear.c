@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	
 	while (*lst)
 	{
-		temp = (*lst)->next; // storing the pointer to the next node before yeeting it
+		temp = (*lst)->next; // storing the pointer to the next node before deleting it
 		del((*lst)->content);
 		free(*lst); // freeing the node AFTER we put the pointer to the next node in temp, 
 						// otherwise if we free the node before storing the pointer in temp
